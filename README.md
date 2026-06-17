@@ -1,16 +1,71 @@
-# React + Vite
+# Inspire Classes 🎓
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio-style website for a tuition teacher offering classes for Grades 1–10. Built to feel like a premium personal brand site rather than a generic coaching-institute page — designed to build trust with parents and drive admissions inquiries.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC?logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-EF008F?logo=framer&logoColor=white)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- **Fully responsive** — looks great on mobile, tablet, and desktop
+- **Scroll-triggered animations** powered by Framer Motion, with an `IntersectionObserver`-based hook so animations only fire once elements enter the viewport
+- **Sticky navbar** with a live scroll-progress indicator
+- **Floating WhatsApp button** and a **back-to-top** button that appears on scroll
+- **Animated stat counters** for student results
+- **Interactive FAQ accordion**
+- **Contact form** with client-side validation and a success state (see [Backend Note](#-backend-note) below)
+- **SEO-friendly** meta tags and semantic structure
+## 🗂️ Sections
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Hero — headline, CTAs, animated particle background
+2. About the Teacher — bio, philosophy, experience
+3. Classes & Subjects — Grades 1–8 (All Subjects) and Grades 9–10 (Math & Science)
+4. Student Results — animated stats + sample score-improvement cards
+5. Testimonials — parent reviews
+6. FAQ — batch timings, fees, demo classes, online/offline, batch size
+7. Contact — form, phone/WhatsApp/email links, map placeholder
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Tool | Purpose |
+|---|---|
+| [React 19](https://react.dev/) | UI library |
+| [Vite](https://vitejs.dev/) | Build tool & dev server |
+| [Tailwind CSS 3](https://tailwindcss.com/) | Utility-first styling |
+| [Framer Motion](https://www.framer.com/motion/) | Animations & transitions |
+| [Lucide React](https://lucide.dev/) | Icon set |
+
+## 📁 Project Structure
+
+```
+inspire-classes/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── About.jsx
+│   │   ├── Classes.jsx
+│   │   ├── WhyUs.jsx
+│   │   ├── Results.jsx
+│   │   ├── Method.jsx
+│   │   ├── Testimonials.jsx
+│   │   ├── Gallery.jsx
+│   │   ├── FAQ.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Footer.jsx
+│   │   └── FloatingActions.jsx
+│   ├── hooks/
+│   │   └── useInView.js        # IntersectionObserver hook for scroll animations
+│   ├── App.jsx                  # Composes all sections
+│   ├── main.jsx                 # React entry point
+│   └── index.css                # Tailwind directives + global styles
+├── index.html
+├── tailwind.config.js
+├── postcss.config.js
+├── vite.config.js
+└── package.json
+```
+
